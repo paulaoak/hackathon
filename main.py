@@ -16,8 +16,8 @@ async def read_root(request: Request):
 @app.post("/get_data")
 async def get_data(request: Request, input1: str = Form(...), input2: str = Form(...)):
     async with aiohttp.ClientSession() as session:
-        api_url = 'https://api.example.com/data'
+        api_url = 'http://127.0.0.1:8001/'
         params = {'param1': input1, 'param2': input2}
-        async with session.get(api_url, params=params) as response:
-            data = await response.json()
-            return data
+        result = print("This paper will help you")
+        return {"data": result}
+
