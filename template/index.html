@@ -4,41 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChemSimLab</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="stylesheet" href="C:\Users\Nakim\ChemLabProject\hackathon\static\style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Reagents</h1>
-        <form id="inputForm" method="post" action="/get_data">
-            <label for="input1">Reagent 1:</label>
-            <input type="text" id="input1" name="input1">
-
-            <label for="input2">Reagent 2:</label>
-            <input type="text" id="input2" name="input2">
-
-            <button type="submit">Submit</button>
-        </form>
-        <div id="result"></div>
+    <header>
+        <div class="logo-container-left">
+            <img src="C:\Users\Nakim\ChemLabProject\hackathon\Preview.png" alt="ChemSimLab Logo" class="logo-image">
+        </div>
+        <div class="logo-container-right">
+            <img src="C:\Users\Nakim\ChemLabProject\hackathon\CodeQueensLogo.png" alt="CodeQueens Logo" class="logo-image">
+        </div>
+    </header>
+    <div class="hero">
+        <h1>Welcome to ChemSimLab</h1>
+        <p>Precision, efficiency, and innovation are just a click away. Simulate chemical reactions with unparalleled accuracy.</p>
     </div>
+    <div class="main-container">
+        <div class="input-container">
+            <form id="inputForm" method="post" action="/get_data">
+                <div class="form-group">
+                    <label for="input1">Reagent 1:</label>
+                    <input type="text" id="input1" name="input1">
+                </div>
+                <div class="form-group">
+                    <label for="input2">Reagent 2:</label>
+                    <input type="text" id="input2" name="input2">
+                </div>
+                <div class="form-group">
+                    <label for="input3">Temperature:</label>
+                    <input type="text" id="input3" name="input3">
+                </div>
+                <button type="submit">Analyze</button>
+            </form>
+        </div>
+        <div class="result-container">
+            <h2>Analysis Results</h2>
+            <div id="result"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Code Queens</p>
+    </footer>
+
     <script>
-        async function calculateSum() {
-            const num1 = document.getElementById('input1').value;
-            const num2 = document.getElementById('input2').value;
-
-            const response = await fetch('http://localhost:8000/sum', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ input1: num1, input2: num2 }),
+        document.getElementById('inputForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            let form = event.target;
+            let formData = new FormData(form);
+            let response = await fetch(form.action, {
+                method: form.method,
+                body: formData
             });
-
-            const data = await response.json();
-            document.getElementById('result').innerText = 'Sum: ' + data.sum;
-        }
+            let data = await response.json();
+            document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+        });
     </script>
 </body>
 </html>
-
-
-
