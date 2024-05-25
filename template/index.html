@@ -22,15 +22,15 @@
     </div>
     <script>
         async function calculateSum() {
-            const num1 = document.getElementById('number1').value;
-            const num2 = document.getElementById('number2').value;
+            const num1 = document.getElementById('input1').value;
+            const num2 = document.getElementById('input2').value;
 
-            const response = await fetch('http://localhost:5000/sum', {
+            const response = await fetch('http://localhost:8000/sum', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ number1: num1, number2: num2 }),
+                body: JSON.stringify({ input1: num1, input2: num2 }),
             });
 
             const data = await response.json();
