@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Input Boxes</title>
+    <title>ChemSimLab</title>
     <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Text Input Boxes</h1>
+        <h1>Reagents</h1>
         <form id="inputForm" method="post" action="/get_data">
-            <label for="input1">Input Box 1:</label>
+            <label for="input1">Reagent 1:</label>
             <input type="text" id="input1" name="input1">
 
-            <label for="input2">Input Box 2:</label>
+            <label for="input2">Reagent 2:</label>
             <input type="text" id="input2" name="input2">
 
             <button type="submit">Submit</button>
