@@ -1,0 +1,151 @@
+body {
+    font-family: Inter, sans-serif;
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background: rgba(30,30,30,255);
+    padding: 20px 20px 20px 0; /* Top, Right, Bottom, Left */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between; 
+    align-items: center;
+    padding-right: 20px; /* Added padding to the right to give some space */
+}
+
+.logo-container-left,
+.logo-container-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 120px; /* Increased size */
+}
+
+.hero {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px 40px; /* Adjusted padding for new layout */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-top: 140px; /* Adjusted margin for fixed header */
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #fff;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 30%; /* Smaller width */
+    box-sizing: border-box;
+}
+
+.result-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 65%; /* Larger width */
+    box-sizing: border-box;
+}
+
+.result-container h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2575fc;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+#result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
