@@ -61,7 +61,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin-top: 20px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -149,3 +149,15 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* Style for the embedded molecule */
+.embedded-molecule {
+    position: relative;
+    background: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow */
+}
+
+h1 {
+    font-size: 40px;
+  }
