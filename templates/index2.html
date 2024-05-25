@@ -12,16 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChemSymLab</title>
-    <link rel="stylesheet" href="..\static\styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <div class="logo-container-left">
-            <img src="..\Preview.png" alt="ChemSimLab Logo" class="logo-image">
+            <img src="{{ url_for('static', filename='Preview.png') }}" alt="ChemSimLab Logo" class="logo-image">
         </div>
         <h1>Welcome to ChemSymLab</h1>
         <div class="logo-container-right">
-            <img src="..\logo.png" alt="CodeQueens Logo" class="logo-image">
+            <img src="{{ url_for('static', filename='image.png') }}" alt="CodeQueens Logo" class="logo-image">
         </div>
     </header>
     <div class="hero">
