@@ -13,7 +13,7 @@ body {
 
 header {
     width: 100%;
-    background: rgba(30,30,30,255);
+    background: rgba(0,0,0,255);
     padding: 20px 20px 20px 0; /* Top, Right, Bottom, Left */
     position: fixed;
     top: 0;
