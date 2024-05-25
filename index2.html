@@ -1,0 +1,105 @@
+<!--
+ * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Date: 2024-05-25 10:23:42
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @LastEditTime: 2024-05-25 19:32:45
+ * @FilePath: \undefinedc:\Software\GoogleDownload\hackathon-main (3)\hackathon-main\template\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemSymLab</title>
+    <link rel="stylesheet" href="..\static\styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container-left">
+            <img src="..\Preview.png" alt="ChemSimLab Logo" class="logo-image">
+        </div>
+        <h1>Welcome to ChemSymLab</h1>
+        <div class="logo-container-right">
+            <img src="..\logo.png" alt="CodeQueens Logo" class="logo-image">
+        </div>
+    </header>
+    <div class="hero">
+        <p>Precision, efficiency, and innovation are just a click away. Simulate chemical reactions with unparalleled accuracy.</p>
+    </div>
+    <div class="main-container">
+        <div class="input-container">
+            <!-- Embed 3D model -->
+            <div class="embedded-molecule">
+                <iframe style="width: 450px; height: 250px;" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=37040"></iframe>
+            </div>
+        </div>
+        <div class="result-container">
+            <h2>Analysis Results</h2>
+            <h3>Experimental Procedure:</h3>
+            <h4>Materials and Reagents:</h4>
+            <ul>
+                <li>Cyclohexene: 12.3 mL</li>
+                <li>Bromine: 6.24 mL</li>
+                <li>Solvent: Carbon tetrachloride (CCl₄) or chloroform (CHCl₃)</li>
+                <li>Ice bath</li>
+                <li>Drying agent (e.g., anhydrous magnesium sulfate)</li>
+                <li>Silica gel for purification</li>
+            </ul>
+        
+            <h4>Apparatus:</h4>
+            <ul>
+                <li>Round-bottom flask (250 mL)</li>
+                <li>Magnetic stirrer and stir bar</li>
+                <li>Ice bath</li>
+                <li>Dropping funnel</li>
+                <li>Separation funnel</li>
+                <li>Rotary evaporator</li>
+                <li>Column chromatography setup</li>
+            </ul>
+        
+            <h4>Procedure:</h4>
+            <ol>
+                <li><em>Preparation:</em>
+                    <ul>
+                        <li>Place a 250 mL round-bottom flask in an ice bath.</li>
+                        <li>Add 12.3 mL of cyclohexene to the flask.</li>
+                    </ul>
+                </li>
+                <li><em>Bromination Reaction:</em>
+                    <ul>
+                        <li>Slowly add 6.24 mL of bromine dissolved in 20 mL of carbon tetrachloride or chloroform to the cyclohexene solution while stirring. Use a dropping funnel to control the addition and keep the reaction mixture at 0-5°C.</li>
+                        <li>Stir the mixture continuously for 1-2 hours, monitoring the reaction progress.</li>
+                    </ul>
+                </li>
+                <li><em>Isolation of the Product:</em>
+                    <ul>
+                        <li>After the reaction is complete, wash the mixture with water to remove residual bromine.</li>
+                        <li>Separate the organic layer using a separation funnel.</li>
+                        <li>Dry the organic layer over anhydrous magnesium sulfate.</li>
+                        <li>Filter the drying agent and concentrate the solution using a rotary evaporator.</li>
+                    </ul>
+                </li>
+                <li><em>Purification:</em>
+                    <ul>
+                        <li>Purify the crude product by column chromatography on silica gel. Use a suitable solvent system (e.g., hexane/ethyl acetate) to elute the desired product.</li>
+                        <li>Collect the fractions containing trans-1,4-dibromocyclohexane and remove the solvent under reduced pressure.</li>
+                    </ul>
+                </li>
+                <li><em>Characterization:</em>
+                    <ul>
+                        <li>Confirm the structure and purity of the product using NMR spectroscopy, IR spectroscopy, and mass spectrometry.</li>
+                    </ul>
+                </li>
+            </ol>
+        
+            <h3>Reference:</h3>
+            <p>For further details, refer to the original paper: <a href="https://pubs.acs.org/doi/10.1021/jo00095a029" target="_blank">"Stereochemistry and Mechanism of the Bromination of Cyclohexene"</a> published in the Journal of Organic Chemistry.</p>
+        <div id="result"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Code Queens</p>
+    </footer>
+</body>
+</html>
