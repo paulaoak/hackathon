@@ -1,53 +1,47 @@
-<!--
- * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @Date: 2024-05-25 10:23:42
- * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2024-05-25 18:50:21
- * @FilePath: \undefinedc:\Software\GoogleDownload\hackathon-main (3)\hackathon-main\template\index.html
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChemSymLab</title>
-    <link rel="stylesheet" href="..\static\styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Add some basic styles for the loading symbol */
+        .loading {
+            display: none;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container-left">
-            <img src="..\Preview.png" alt="ChemSimLab Logo" class="logo-image">
+            <img src="{{ url_for('static', filename='Preview.png') }}" alt="ChemSimLab Logo" class="logo-image">
         </div>
         <h1>Welcome to ChemSymLab</h1>
         <div class="logo-container-right">
-            <img src="..\logo.png" alt="CodeQueens Logo" class="logo-image">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="CodeQueens Logo" class="logo-image">
         </div>
     </header>
     <div class="hero">
-        <p>Precision, efficiency, and innovation are just a click away. Simulate chemical reactions with unparalleled accuracy.</p>
+        <p>Precision, efficiency, and innovation are just a click away. Optimal experimental procedure to obtain your product.</p>
     </div>
     <div class="main-container">
         <div class="input-container">
-            <form id="inputForm" method="post" action="/get_data">
+            <form id="inputForm" method="post" action="/check_sum">
                 <div class="form-group">
-                    <label for="input1">Reagent 1:</label>
+                    <label for="input1">Product:</label>
                     <input type="text" id="input1" name="input1">
                 </div>
                 <div class="form-group">
-                    <label for="input2">Reagent 2:</label>
+                    <label for="input2">Quantity (units):</label>
                     <input type="text" id="input2" name="input2">
-                </div>
-                <div class="form-group">
-                    <label for="input3">Temperature:</label>
-                    <input type="text" id="input3" name="input3">
                 </div>
                 <button type="submit">Analyze</button>
             </form>
-        </div>
-        <div class="result-container">
-            <h2>Analysis Results</h2>
-            <div id="result"></div>
+            <div class="loading" id="loading">Loading...</div>
         </div>
     </div>
     <footer>
@@ -55,16 +49,14 @@
     </footer>
 
     <script>
-        document.getElementById('inputForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            let form = event.target;
-            let formData = new FormData(form);
-            let response = await fetch(form.action, {
-                method: form.method,
-                body: formData
-            });
-            let data = await response.json();
-            document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+        document.getElementById('inputForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('loading').style.display = 'block'; // Show the loading symbol
+            
+            // Delay the form submission by 5 seconds
+            setTimeout(() => {
+                document.getElementById('inputForm').submit(); // Submit the form after 5 seconds
+            }, 5000); // 5000 milliseconds = 5 seconds
         });
     </script>
 </body>
