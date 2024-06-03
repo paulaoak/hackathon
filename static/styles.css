@@ -59,7 +59,7 @@ header {
 
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1600px;
     margin-top: 20px;
@@ -74,7 +74,7 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 30%; /* Smaller width */
+    width: 60%; /* Smaller width */
     box-sizing: border-box;
 }
 
@@ -141,7 +141,7 @@ button:hover {
 }
 
 footer {
-    background-color: rgba(0,0,0,255);
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -161,3 +161,14 @@ footer {
 h1 {
     font-size: 40px;
   }
+
+
+
+
+.loading {
+    display: none;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
